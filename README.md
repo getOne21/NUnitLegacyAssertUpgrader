@@ -148,6 +148,7 @@ Generate a JSON report:
 ## Command-line options
 
 ```
+
 NUnitAssertUpgrader <repo-root> [options]
 
 Options:
@@ -166,6 +167,7 @@ Options:
 ```
 
 Notes:
+
 - `--write-until-clean` is ignored in `--dry-run` mode.
 - Globs support `**`, `*`, `?`. Multiple globs can be separated by commas or spaces.
 
@@ -252,14 +254,17 @@ Run with 8 workers and produce a report:
 ## Troubleshooting
 
 **Tool finds nothing**  
+
 - Verify the `<repo-root>` path.
 - Check `--include`/`--exclude` globs.
 - Try without `--since-git`.
 
 **Unexpected formatting of messages**  
+
 - The tool converts `message + params` into `string.Format(message, params)`. If you use custom format providers, adjust manually.
 
 **Compilation errors after conversion**  
+
 - Ensure NUnit constraint namespaces are referenced (`NUnit.Framework`).
 - Check for custom assertion wrappers that need manual updates.
 
@@ -284,4 +289,4 @@ Or just produce a report artifact:
 
 ## License
 
-Internal tooling for legacy migration. If you intend to publish externally, add your preferred license here (e.g., MIT).
+Internal tooling for legacy migration. Runs under the [MIT LICENSE](LICENSE.txt)
